@@ -1,0 +1,33 @@
+GET http://localhost:8056/movies
+
+###
+
+GET http://localhost:8056/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+###
+GET http://localhost:8056/movies?genre=Sci-Fi
+
+###
+POST http://localhost:8056/movies
+Content-Type: application/json
+
+{
+  "director": "MEGAPASTELITO",
+  "duration": 354,
+  "genre": [
+   "Action"
+  ],
+  "poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp",
+  "title": "The pastel dark",
+  "year": 2024
+}
+
+###
+
+PATCH  http://localhost:8056/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+  "rate":10,
+  "year":2020
+}
